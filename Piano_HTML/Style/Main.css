@@ -1,0 +1,107 @@
+header .column,body,.conteiner header{
+    display: flex;
+    align-items:center;
+}
+
+header h2{
+    font-size: 1.6rem
+}
+
+body{
+    justify-content:center;
+    min-height: 100vh;
+    background-color: rgb(231, 227, 227)
+}
+
+.conteiner{
+    width: 780px;
+    border: 1px solid red;
+    padding: 30px 40px;
+    border-radius: 20px;
+    background-color: rgb(85, 68, 81)
+}
+
+header .column span{
+    font-weight: 500;
+    margin-right: 15px;
+    font-size: 1.19rem
+}
+
+.volume input{
+    accent-color: white
+}
+
+.conteiner header{
+    justify-content: space-between
+}
+
+.check input{
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background-color: rgb(65, 59, 59);
+    cursor: pointer;
+    position: relative
+}.check input::before{
+    content:"";
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 0.3rem;
+    border-radius: inherit;
+    background-color: rgb(165, 152, 152);
+    position: absolute;
+    transform: translateY(-50%);
+    transition: all 0.3s ease
+}.check input:checked::before{
+    left: 2.3rem;
+    background-color: rgb(233, 215, 215);
+    
+}
+
+.piano{
+    display: flex;
+    margin-top: 40px
+}
+
+.piano .key{
+    cursor: pointer;
+    user-select: none;
+    list-style: none;
+    position: relative;
+    text-transform: uppercase
+}
+
+.piano .black{
+    width: 35px;
+    height: 115px;
+    z-index: 2;
+    margin:0 -22px 0 -22px;
+    border-radius: 7px;
+    background: linear-gradient(rgb(0, 0, 0), rgb(61, 59, 59))
+}.piano .black.active{
+    box-shadow: inset -5px 5px 10px rgba(255, 255, 255, 0.25);
+}
+
+.piano .white{
+    border: 1px solid  black;
+    width: 70px;
+    height: 230px;
+    border-radius: 7px;
+    background: linear-gradient(white 90%, rgb(218, 207, 207))
+}.piano .white.active{
+    box-shadow: inset -5px 5px 20px rgba(0, 0, 0, 0.35);
+}
+
+.piano span{
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem
+}
+
+.piano .key.hide span{
+    display: none
+}
